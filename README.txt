@@ -1,0 +1,1 @@
+Copy your uploaded logo into assets/logo.png. Replace YOUR_FORM_ID in index.html with your Formspree form ID.
