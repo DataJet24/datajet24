@@ -1,78 +1,441 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>You're In — DJ24 Early Access</title>
-  <meta name="description" content="You're on the DJ24 Early Access list. Thank you for joining the future of business aviation.">
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to DataJet24 Early Access</title>
+  <meta name="description" content="You are officially on the DataJet24 Early Access list. You will receive 6 months of complimentary access when we launch.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://www.datajet24.com/thank-you.html">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    .thankyou-hero{max-width:760px;margin:auto;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px 24px}
-  .checkmark-circle{width:80px;height:80px;border-radius:50%;background:rgba(255,138,0,.12);border:2px solid #ff8a00;display:flex;align-items:center;justify-content:center;margin:0 auto 32px;animation:popIn .6s cubic-bezier(.175,.885,.32,1.275) both}
-  .checkmark-circle svg{width:36px;height:36px}
-  @keyframes popIn{0%{transform:scale(0);opacity:0}100%{transform:scale(1);opacity:1}}
-  .thankyou-hero h1{font-size:3rem;margin:24px 0 12px;animation:fadeUp .7s .1s both}
-  .thankyou-hero .subtitle{font-size:1.2rem;color:#bbb;font-weight:400;margin-bottom:32px;animation:fadeUp .7s .2s both}
-  .perks{background:#111;border:1px solid #222;border-radius:20px;padding:32px 36px;margin:28px 0 36px;width:100%;text-align:left;animation:fadeUp .7s .3s both}
-  .perks p{color:#cfcfcf;line-height:1.9;margin-bottom:8px}
-    .perks .perk-item{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px}
-  .perk-item .tick{color:#ff8a00;font-size:1.2rem;margin-top:2px;flex-shrink:0}
-    .perk-item span{color:#cfcfcf;line-height:1.7}
-      .launch-note{color:#777;font-size:.95rem;margin-top:4px;margin-bottom:36px;animation:fadeUp .7s .4s both}
-  .launch-note strong{color:#ff8a00}
-      .btn-home{display:inline-block;padding:16px 36px;border:none;border-radius:40px;background:#ff8a00;color:#fff;font-weight:bold;font-size:1rem;cursor:pointer;text-decoration:none;transition:opacity .2s,transform .2s;animation:fadeUp .7s .5s both}
-    .btn-home:hover{opacity:.88;transform:translateY(-2px)}
-  @keyframes fadeUp{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
-  .particles{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
-  .particle{position:absolute;width:4px;height:4px;border-radius:50%;background:#ff8a00;opacity:0;animation:float linear infinite}
-    @keyframes float{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:.6}90%{opacity:.2}100%{transform:translateY(-10vh) scale(1.5);opacity:0}}
-  .thankyou-hero,.perks,.btn-home{position:relative;z-index:1}
-  @media(max-width:600px){.thankyou-hero h1{font-size:2.2rem}.perks{padding:24px 20px}.thankyou-hero .subtitle{font-size:1rem}}
-</style>
-  </head>
-  <body>
-  <div class="bg"></div>
-  <div class="particles" id="particles"></div>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <section class="thankyou-hero">
-    <div class="checkmark-circle">
-      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7 18L14 25L29 11" stroke="#ff8a00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
+    :root {
+      --accent: #FF7800;
+      --accent-light: #FF9A35;
+      --bg: #030303;
+      --bg-card: #0d0d0d;
+      --border: rgba(255,255,255,0.07);
+      --border-light: rgba(255,255,255,0.12);
+      --white: #ffffff;
+      --white-70: rgba(255,255,255,0.7);
+      --white-50: rgba(255,255,255,0.5);
+      --white-30: rgba(255,255,255,0.3);
+      --green: #00D084;
+    }
 
-    <img src="assets/logo.png" class="logo" alt="DJ24 Logo" style="width:160px;margin-bottom:20px">
+    html { -webkit-font-smoothing: antialiased; }
 
-    <h1>Welcome to DJ24</h1>
-    <p class="subtitle">You're officially on the Early Access list.</p>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
 
-    <div class="perks">
-      <p style="color:#fff;font-weight:600;margin-bottom:18px;font-size:1.05rem">Thank you for joining the future of business aviation.</p>
-    <p style="margin-bottom:20px;color:#aaa;font-size:.95rem">As promised, you'll receive:</p>
-      <div class="perk-item">
-        <span class="tick">✓</span>
-        <span><strong style="color:#fff">6 months of complimentary access</strong> when DJ24 launches.</span>
+    canvas#bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Nav */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 0 32px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      background: rgba(3,3,3,0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 17px;
+      text-decoration: none;
+      color: var(--white);
+    }
+
+    .nav-logo img { height: 34px; object-fit: contain; }
+
+    /* Main */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 24px 80px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .thank-card {
+      text-align: center;
+      max-width: 580px;
+      width: 100%;
+    }
+
+    /* Success badge */
+    .success-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(0,208,132,0.08);
+      border: 1px solid rgba(0,208,132,0.3);
+      margin-bottom: 32px;
+      position: relative;
+    }
+
+    .success-badge::before {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,208,132,0.1);
+    }
+
+    .success-badge::after {
+      content: '';
+      position: absolute;
+      inset: -16px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,208,132,0.06);
+    }
+
+    .success-icon {
+      color: var(--green);
+      animation: checkScale 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+    }
+
+    @keyframes checkScale {
+      from { opacity: 0; transform: scale(0.5); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .status-text {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green);
+      background: rgba(0,208,132,0.08);
+      border: 1px solid rgba(0,208,132,0.2);
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+      animation: fadeUp 0.7s ease 0.4s both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+      animation: fadeUp 0.7s ease 0.5s both;
+    }
+
+    h1 .accent { color: var(--accent); }
+
+    .sub-text {
+      font-size: 1.05rem;
+      color: var(--white-70);
+      line-height: 1.7;
+      margin-bottom: 48px;
+      animation: fadeUp 0.7s ease 0.6s both;
+    }
+
+    .benefit-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 36px;
+      text-align: left;
+      animation: fadeUp 0.7s ease 0.7s both;
+    }
+
+    .benefit-title {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .benefit-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .benefit-check {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(255,120,0,0.1);
+      border: 1px solid rgba(255,120,0,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .benefit-item strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 2px;
+    }
+
+    .benefit-item span {
+      font-size: 13px;
+      color: var(--white-50);
+    }
+
+    .cta-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      animation: fadeUp 0.7s ease 0.85s both;
+    }
+
+    .btn-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 32px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-home:hover {
+      background: var(--accent-light);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(255,120,0,0.3);
+    }
+
+    .note-text {
+      font-size: 12px;
+      color: var(--white-30);
+      letter-spacing: 0.02em;
+    }
+
+    /* Footer */
+    footer {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 28px;
+      border-top: 1px solid var(--border);
+    }
+
+    footer p {
+      font-size: 12px;
+      color: var(--white-30);
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      main { padding-top: 100px; }
+      .benefit-card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="bg"></canvas>
+
+  <nav>
+    <a href="/" class="nav-logo">
+      <img src="assets/logo.png" alt="DataJet24">
+      <span>DataJet24</span>
+    </a>
+  </nav>
+
+  <main>
+    <div class="thank-card">
+      <div class="success-badge">
+        <svg class="success-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+
+      <div class="status-text">You're on the list</div>
+
+      <h1>Welcome to<br><span class="accent">DataJet24.</span></h1>
+
+      <p class="sub-text">You are officially on the Early Access list. We will be in touch when DataJet24 launches. In the meantime, here is what you have secured.</p>
+
+      <div class="benefit-card">
+        <div class="benefit-title">Your Early Access Benefits</div>
+        <ul class="benefit-list">
+          <li class="benefit-item">
+            <div class="benefit-check">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <strong>6 Months Complimentary Access</strong>
+              <span>Full platform access at no cost for the first 6 months after launch.</span>
+            </div>
+          </li>
+          <li class="benefit-item">
+            <div class="benefit-check">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <strong>Priority Onboarding</strong>
+              <span>Founding members receive dedicated onboarding before the public launch.</span>
+            </div>
+          </li>
+          <li class="benefit-item">
+            <div class="benefit-check">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <strong>Founding Member Status</strong>
+              <span>Recognised as a founding cohort member with permanent recognition in the platform.</span>
+            </div>
+          </li>
+          <li class="benefit-item">
+            <div class="benefit-check">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <strong>Product Influence</strong>
+              <span>Early access members shape the roadmap. Your feedback matters.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cta-row">
+        <a href="/" class="btn-home">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          <span>Back to DataJet24</span>
+        </a>
+        <p class="note-text">We will never share your email. You can unsubscribe at any time.</p>
       </div>
     </div>
+  </main>
 
-    <p class="launch-note">We'll keep you updated as we move toward launch in <strong>2027</strong>.</p>
-
-    <a href="https://www.datajet24.com" class="btn-home">← Return to Homepage</a>
-  </section>
+  <footer>
+    <p>© 2025 DataJet24. The Global Intelligence Platform for Business Aviation.</p>
+  </footer>
 
   <script>
-  (function(){
-    var container = document.getElementById('particles');
-  for(var i=0;i<18;i++){
-    var p=document.createElement('div');
-    p.className='particle';
-    p.style.left=Math.random()*100+'%';
-    p.style.animationDuration=(6+Math.random()*10)+'s';
-    p.style.animationDelay=(Math.random()*8)+'s';
-    p.style.width=p.style.height=(2+Math.random()*4)+'px';
-    container.appendChild(p);
-  }
-})();
-</script>
-  </body>
-  </html>
+    // Particle background
+    (function() {
+      const canvas = document.getElementById('bg');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      function init() {
+        particles = [];
+        const count = Math.floor((canvas.width * canvas.height) / 22000);
+        for (let i = 0; i < Math.min(count, 60); i++) {
+          particles.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            r: Math.random() * 1 + 0.3,
+            vx: (Math.random() - 0.5) * 0.25,
+            vy: (Math.random() - 0.5) * 0.25,
+            o: Math.random() * 0.4 + 0.05
+          });
+        }
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const d = Math.sqrt(dx*dx + dy*dy);
+            if (d < 120) {
+              ctx.beginPath();
+              ctx.strokeStyle = 'rgba(255,120,0,' + ((1 - d/120) * 0.08) + ')';
+              ctx.lineWidth = 0.5;
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.stroke();
+            }
+          }
+          ctx.beginPath();
+          ctx.arc(particles[i].x, particles[i].y, particles[i].r, 0, Math.PI*2);
+          ctx.fillStyle = 'rgba(255,120,0,' + particles[i].o + ')';
+          ctx.fill();
+          particles[i].x += particles[i].vx;
+          particles[i].y += particles[i].vy;
+          if (particles[i].x < 0) particles[i].x = canvas.width;
+          if (particles[i].x > canvas.width) particles[i].x = 0;
+          if (particles[i].y < 0) particles[i].y = canvas.height;
+          if (particles[i].y > canvas.height) particles[i].y = 0;
+        }
+        requestAnimationFrame(draw);
+      }
+
+      resize();
+      init();
+      draw();
+      window.addEventListener('resize', () => { resize(); init(); });
+    })();
+  </script>
+
+</body>
+</html>
