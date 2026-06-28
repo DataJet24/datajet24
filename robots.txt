@@ -1,0 +1,11 @@
+# DataJet24 robots.txt
+# https://www.datajet24.com
+
+User-agent: *
+Allow: /
+
+# Disallow admin/private paths (none currently)
+Disallow: /thank-you.html
+
+# Sitemap
+Sitemap: https://www.datajet24.com/sitemap.xml
