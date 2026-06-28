@@ -1,1 +1,3 @@
-document.querySelectorAll('.card').forEach(c=>c.onmousemove=e=>{c.style.boxShadow='0 0 30px rgba(255,138,0,.15)'});
+// DataJet24 - Root level (legacy)
+// Main JavaScript is now located at: js/main.js
+// This file is retained for backward compatibility only.
