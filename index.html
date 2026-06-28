@@ -1,47 +1,553 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>DJ24 | The Global Intelligence Platform for Business Aviation</title>
-  <meta name="description" content="Launching in 2027. Join the early access program and receive 6 months of complimentary access.">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataJet24 | The Global Intelligence Platform for Business Aviation</title>
+  <meta name="description" content="DataJet24 is building the world's leading Business Aviation Intelligence Platform. Real-time tracking, airport intelligence, operator directories, fleet data, FBO networks and market analytics — unified in one platform.">
+  <meta name="keywords" content="business aviation intelligence, charter operator platform, aircraft tracking, FBO directory, fleet management, aviation data, private jet intelligence">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.datajet24.com/">
+  <meta property="og:title" content="DataJet24 | The Global Intelligence Platform for Business Aviation">
+  <meta property="og:description" content="The Bloomberg Terminal for Business Aviation. Airport intelligence, live tracking, operator directories, fleet data and market analytics — unified.">
+  <meta property="og:image" content="https://www.datajet24.com/assets/og-image.png">
+  <meta property="og:site_name" content="DataJet24">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DataJet24 | Business Aviation Intelligence Platform">
+  <meta name="twitter:description" content="The Bloomberg Terminal for Business Aviation. Join Early Access — 6 months free.">
+  <meta name="twitter:image" content="https://www.datajet24.com/assets/og-image.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.datajet24.com/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DataJet24",
+    "url": "https://www.datajet24.com",
+    "logo": "https://www.datajet24.com/assets/logo.png",
+    "description": "The Global Intelligence Platform for Business Aviation",
+    "foundingDate": "2024",
+    "sameAs": []
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
-  </head>
+</head>
 <body>
-  <div class="bg"></div>div>
-  <section class="hero">
-    <img src="assets/logo.png" class="logo" alt="DJ24 Logo">
-    <h2>The Global Intelligence Platform for Business Aviation</h2>
-  <h1>Launching in <span>2027</span></h1>
-  <p>Business aviation is fragmented. DJ24 brings together airports, operators, aircraft, FBOs, live charter tracking, fleet intelligence, sourcing and market intelligence into one intelligent platform.</p>
-  <div class="badge">🎉 Join today and receive <b>6 months of complimentary access</b> when DJ24 launches.</div>div>
-  <form id="waitlist" action="https://formspree.io/f/mnjkvwpp" method="POST">
-  <input type="hidden" name="_subject" value="New DJ24 Early Access Signup">
-  <input type="hidden" name="_next" value="https://www.datajet24.com/thank-you.html">
-  <input type="email" name="email" placeholder="Enter your email" required>
-  <button>Request Early Access</button>
-  </form>form>
-  </section>section>
 
-<section class="features">
-<div class="card"><h3>✈ Live Charter Tracking</h3><p>Real-time business aviation movements.</p></div>div>
-<div class="card"><h3>🌍 Airport Intelligence</h3><p>Private airports, FBOs and infrastructure.</p></div>div>
-<div class="card"><h3>🏢 Operator Directory</h3><p>Verified charter operators worldwide.</p></div>div>
-<div class="card"><h3>🛩 Aircraft Directory</h3><p>Comprehensive fleet intelligence.</p></div>div>
-<div class="card"><h3>📊 Market Intelligence</h3><p>Industry insights and trends.</p></div>div>
-<div class="card"><h3>🔎 One Search</h3><p>Everything in one platform.</p></div>div>
-</section>section>
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-inner">
+      <img src="assets/logo.png" alt="DataJet24" class="loader-logo">
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
 
-<section class="stats">
-<div><strong>40,000+</strong><span>Aircraft</span></div>
-<div><strong>12,000+</strong><span>Operators</span></div>
-<div><strong>5,000+</strong><span>Airports</span></div>
-<div><strong>Global</strong><span>Coverage</span></div>
-</section>section>
+  <!-- Navigation -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="assets/logo.png" alt="DataJet24" height="36">
+        <span>DataJet24</span>
+      </a>
+      <div class="nav-links">
+        <a href="#platform">Platform</a>
+        <a href="#intelligence">Intelligence</a>
+        <a href="#about">About</a>
+      </div>
+      <a href="#waitlist" class="nav-cta">Request Early Access</a>
+      <button class="nav-mobile-btn" id="mobileMenuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile-menu" id="mobileMenu">
+      <a href="#platform" class="mobile-link">Platform</a>
+      <a href="#intelligence" class="mobile-link">Intelligence</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#waitlist" class="mobile-link mobile-cta">Request Early Access</a>
+    </div>
+  </nav>
 
-<footer>© 2026 DJ24 • Private Aviation Intelligence</footer>
-<script src="js/main.js"></script>
+  <!-- Hero Section -->
+  <section id="hero">
+    <!-- Animated Background Canvas -->
+    <canvas id="heroCanvas"></canvas>
+
+    <!-- World Map -->
+    <div class="hero-map" id="heroMap">
+      <svg viewBox="0 0 1200 600" class="world-map-svg" id="worldMap" xmlns="http://www.w3.org/2000/svg">
+        <!-- Simplified world map paths -->
+        <g class="map-land" fill="none" stroke="rgba(255,120,0,0.12)" stroke-width="0.5">
+          <!-- North America -->
+          <path d="M 120 80 L 200 60 L 280 70 L 320 90 L 310 140 L 290 180 L 240 200 L 200 220 L 170 200 L 140 160 L 110 130 Z" fill="rgba(255,120,0,0.03)"/>
+          <!-- South America -->
+          <path d="M 200 260 L 240 250 L 270 270 L 280 320 L 260 380 L 230 420 L 200 400 L 180 360 L 175 310 L 185 280 Z" fill="rgba(255,120,0,0.03)"/>
+          <!-- Europe -->
+          <path d="M 480 70 L 540 60 L 580 75 L 590 100 L 560 120 L 520 115 L 490 100 Z" fill="rgba(255,120,0,0.03)"/>
+          <!-- Africa -->
+          <path d="M 490 150 L 560 140 L 600 160 L 620 220 L 610 300 L 580 360 L 540 380 L 500 360 L 470 300 L 465 230 L 475 180 Z" fill="rgba(255,120,0,0.03)"/>
+          <!-- Asia -->
+          <path d="M 600 60 L 800 50 L 900 80 L 950 120 L 920 160 L 850 180 L 750 170 L 680 150 L 620 130 L 590 100 Z" fill="rgba(255,120,0,0.03)"/>
+          <!-- Australia -->
+          <path d="M 820 320 L 900 300 L 960 320 L 970 380 L 940 420 L 870 430 L 820 400 L 800 360 Z" fill="rgba(255,120,0,0.03)"/>
+        </g>
+        <!-- Flight routes -->
+        <g class="flight-routes" id="flightRoutes"></g>
+        <!-- Airport dots -->
+        <g class="airports" id="airportDots"></g>
+      </svg>
+    </div>
+
+    <!-- Radar overlay -->
+    <div class="radar-overlay" id="radarOverlay">
+      <svg viewBox="0 0 400 400" class="radar-svg">
+        <circle cx="200" cy="200" r="180" fill="none" stroke="rgba(255,120,0,0.06)" stroke-width="1"/>
+        <circle cx="200" cy="200" r="130" fill="none" stroke="rgba(255,120,0,0.08)" stroke-width="1"/>
+        <circle cx="200" cy="200" r="80" fill="none" stroke="rgba(255,120,0,0.1)" stroke-width="1"/>
+        <circle cx="200" cy="200" r="30" fill="none" stroke="rgba(255,120,0,0.15)" stroke-width="1"/>
+        <line x1="200" y1="20" x2="200" y2="380" stroke="rgba(255,120,0,0.05)" stroke-width="1"/>
+        <line x1="20" y1="200" x2="380" y2="200" stroke="rgba(255,120,0,0.05)" stroke-width="1"/>
+        <line x1="73" y1="73" x2="327" y2="327" stroke="rgba(255,120,0,0.04)" stroke-width="1"/>
+        <line x1="327" y1="73" x2="73" y2="327" stroke="rgba(255,120,0,0.04)" stroke-width="1"/>
+        <!-- Radar sweep -->
+        <path id="radarSweep" d="M 200 200 L 200 20 A 180 180 0 0 1 380 200 Z" fill="url(#radarGrad)" opacity="0.6"/>
+        <defs>
+          <radialGradient id="radarGrad" cx="200" cy="200" r="180" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="rgba(255,120,0,0)"/>
+            <stop offset="70%" stop-color="rgba(255,120,0,0)"/>
+            <stop offset="100%" stop-color="rgba(255,120,0,0.3)"/>
+          </radialGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- Hero content -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Early Access — 6 months complimentary</span>
+      </div>
+      <h1 class="hero-headline">
+        <span class="line-1">The Intelligence</span>
+        <span class="line-2">Platform for</span>
+        <span class="line-3 accent">Business Aviation</span>
+      </h1>
+      <p class="hero-sub">DataJet24 unifies airport intelligence, live tracking, operator directories, fleet data, FBO networks and market analytics into one platform built for aviation professionals.</p>
+      <div class="hero-actions">
+        <a href="#waitlist" class="btn-primary">
+          <span>Request Early Access</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#platform" class="btn-ghost">
+          <span>Explore Platform</span>
+        </a>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric">
+          <span class="metric-value" data-target="40000">0</span>
+          <span class="metric-label">Airports Tracked</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-value" data-target="8000">0</span>
+          <span class="metric-label">Aircraft Monitored</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-value" data-target="190">0</span>
+          <span class="metric-label">Countries Covered</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- Marquee Banner -->
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <span>Airport Intelligence</span>
+      <span class="sep">◆</span>
+      <span>Live Tracking</span>
+      <span class="sep">◆</span>
+      <span>Operator Directory</span>
+      <span class="sep">◆</span>
+      <span>Fleet Intelligence</span>
+      <span class="sep">◆</span>
+      <span>FBO Network</span>
+      <span class="sep">◆</span>
+      <span>Market Analytics</span>
+      <span class="sep">◆</span>
+      <span>Conflict Zones</span>
+      <span class="sep">◆</span>
+      <span>Weather Data</span>
+      <span class="sep">◆</span>
+      <span>Aircraft Sourcing</span>
+      <span class="sep">◆</span>
+      <span>Aviation News</span>
+      <span class="sep">◆</span>
+      <span>Airport Intelligence</span>
+      <span class="sep">◆</span>
+      <span>Live Tracking</span>
+      <span class="sep">◆</span>
+      <span>Operator Directory</span>
+      <span class="sep">◆</span>
+      <span>Fleet Intelligence</span>
+      <span class="sep">◆</span>
+      <span>FBO Network</span>
+      <span class="sep">◆</span>
+      <span>Market Analytics</span>
+      <span class="sep">◆</span>
+      <span>Conflict Zones</span>
+      <span class="sep">◆</span>
+      <span>Weather Data</span>
+      <span class="sep">◆</span>
+    </div>
+  </div>
+
+  <!-- Platform Overview -->
+  <section id="platform" class="section-platform">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span>The Platform</span>
+      </div>
+      <h2 class="section-title">One platform.<br><span class="accent">Everything you need.</span></h2>
+      <p class="section-subtitle">Aviation intelligence has always been fragmented. DataJet24 changes that — bringing together every data point that matters to aviation professionals into a single, unified platform.</p>
+
+      <div class="platform-grid">
+        <div class="platform-card" data-aos="fade-up" data-delay="0">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Airport Intelligence</h3>
+          <p>Real-time data on 40,000+ airports worldwide. Runway data, handling agents, slot availability, NOTAMs and ground infrastructure.</p>
+          <div class="card-tag">40,000+ Airports</div>
+        </div>
+
+        <div class="platform-card" data-aos="fade-up" data-delay="100">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21 4 19.5 2.5S18 1 16.5 2.5L13 6 4.8 4.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 5.2 5.3c.4.4.9.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+          </div>
+          <h3>Live Tracking</h3>
+          <p>Track business aviation movements in real time. ADS-B feeds, flight history, route analysis and aircraft positioning across the globe.</p>
+          <div class="card-tag">Real-Time ADS-B</div>
+        </div>
+
+        <div class="platform-card" data-aos="fade-up" data-delay="200">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Operator Directory</h3>
+          <p>Verified directory of charter operators worldwide. AOC status, fleet composition, operational areas, certifications and contact data.</p>
+          <div class="card-tag">Verified Operators</div>
+        </div>
+
+        <div class="platform-card" data-aos="fade-up" data-delay="300">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Fleet Intelligence</h3>
+          <p>Comprehensive aircraft database with specs, ownership history, maintenance status, valuations and market positioning across all business jet categories.</p>
+          <div class="card-tag">Full Aircraft Database</div>
+        </div>
+
+        <div class="platform-card" data-aos="fade-up" data-delay="400">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>FBO Network</h3>
+          <p>Global directory of Fixed Base Operators with fuel pricing, services, hours, ground handling capabilities and customer reviews.</p>
+          <div class="card-tag">Global FBO Data</div>
+        </div>
+
+        <div class="platform-card" data-aos="fade-up" data-delay="500">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3>Market Intelligence</h3>
+          <p>Business aviation market analytics, charter pricing benchmarks, demand trends, fleet utilisation data and economic indicators.</p>
+          <div class="card-tag">Market Analytics</div>
+        </div>
+
+        <div class="platform-card" data-aos="fade-up" data-delay="600">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3>Conflict Zones</h3>
+          <p>Continuously updated conflict zone intelligence, airspace restrictions, NOTAM overlays and risk assessments for operational safety planning.</p>
+          <div class="card-tag">Real-Time Risk Data</div>
+        </div>
+
+        <div class="platform-card" data-aos="fade-up" data-delay="700">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Aircraft Sourcing</h3>
+          <p>Intelligent aircraft acquisition platform connecting buyers, sellers and brokers with market valuations, fleet matching and deal analytics.</p>
+          <div class="card-tag">Buy &amp; Sell Intelligence</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intelligence Section -->
+  <section id="intelligence" class="section-intelligence">
+    <div class="container">
+      <div class="intel-layout">
+        <div class="intel-left">
+          <div class="section-label">
+            <span class="label-line"></span>
+            <span>Why DataJet24</span>
+          </div>
+          <h2 class="section-title">Built for professionals<br>who demand <span class="accent">precision.</span></h2>
+          <p class="intel-desc">DataJet24 is not a consumer app. It is a professional-grade intelligence platform built for the operators, owners, brokers, dispatchers and executives who power the business aviation industry.</p>
+
+          <div class="intel-features">
+            <div class="intel-feature">
+              <div class="feature-check">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <strong>One Platform, All Data</strong>
+                <span>No more switching between 12 different tools. Everything lives in DJ24.</span>
+              </div>
+            </div>
+            <div class="intel-feature">
+              <div class="feature-check">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <strong>Real-Time Intelligence</strong>
+                <span>Live data feeds updated continuously. Always current, always accurate.</span>
+              </div>
+            </div>
+            <div class="intel-feature">
+              <div class="feature-check">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <strong>Global Coverage</strong>
+                <span>190+ countries. 40,000+ airports. True global operational visibility.</span>
+              </div>
+            </div>
+            <div class="intel-feature">
+              <div class="feature-check">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <strong>Enterprise Grade</strong>
+                <span>Built to the standards that NetJets, VistaJet and Luxaviation demand.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="intel-right">
+          <div class="intel-card glass-card">
+            <div class="intel-card-header">
+              <div class="terminal-dot red"></div>
+              <div class="terminal-dot yellow"></div>
+              <div class="terminal-dot green"></div>
+              <span class="terminal-title">DJ24 Live Intelligence</span>
+            </div>
+            <div class="intel-card-body">
+              <div class="data-row">
+                <span class="data-label">EGLL / London Heathrow</span>
+                <span class="data-status active">OPERATIONAL</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">G-XWEC · Gulfstream G700</span>
+                <span class="data-status tracking">AIRBORNE</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">NetJets Europe · AOC Active</span>
+                <span class="data-status verified">VERIFIED</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">LFPB / Paris Le Bourget</span>
+                <span class="data-status active">OPERATIONAL</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">N801BJ · Bombardier Global 7500</span>
+                <span class="data-status tracking">AIRBORNE</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">Charter Index Q2 2025</span>
+                <span class="data-value">+8.4%</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">Active Flights (Business Av)</span>
+                <span class="data-value counter-live">4,218</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">Conflict Zone Updates</span>
+                <span class="data-status warning">3 NEW</span>
+              </div>
+            </div>
+            <div class="intel-card-footer">
+              <div class="pulse-dot"></div>
+              <span>Live feed · Updated 2s ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who It's For -->
+  <section id="about" class="section-users">
+    <div class="container">
+      <div class="section-label centered">
+        <span class="label-line"></span>
+        <span>Who It's For</span>
+        <span class="label-line"></span>
+      </div>
+      <h2 class="section-title center">Built for every<br>aviation <span class="accent">professional.</span></h2>
+
+      <div class="users-grid">
+        <div class="user-card" data-aos="fade-up">
+          <div class="user-icon">✈</div>
+          <h4>Charter Operators</h4>
+          <p>Manage operations, monitor competitors, track market demand and source aircraft — all from one dashboard.</p>
+        </div>
+        <div class="user-card" data-aos="fade-up">
+          <div class="user-icon">◈</div>
+          <h4>Aircraft Owners</h4>
+          <p>Track your aircraft, monitor market valuations and stay informed about your asset's performance.</p>
+        </div>
+        <div class="user-card" data-aos="fade-up">
+          <div class="user-icon">⬡</div>
+          <h4>Fleet Managers</h4>
+          <p>Complete fleet visibility with real-time positioning, maintenance status and utilisation analytics.</p>
+        </div>
+        <div class="user-card" data-aos="fade-up">
+          <div class="user-icon">⟐</div>
+          <h4>Aircraft Brokers</h4>
+          <p>Access market data, ownership records and valuation tools to close more deals with confidence.</p>
+        </div>
+        <div class="user-card" data-aos="fade-up">
+          <div class="user-icon">◎</div>
+          <h4>Dispatchers</h4>
+          <p>Real-time airport conditions, NOTAMs, weather overlays and conflict zone alerts for every route.</p>
+        </div>
+        <div class="user-card" data-aos="fade-up">
+          <div class="user-icon">▣</div>
+          <h4>FBO Managers</h4>
+          <p>Monitor inbound traffic, manage your FBO listing and stay ahead of competitor activity.</p>
+        </div>
+        <div class="user-card" data-aos="fade-up">
+          <div class="user-icon">◉</div>
+          <h4>Corporate Flight Depts</h4>
+          <p>Full operational intelligence for corporate aviation teams managing complex schedules and global routes.</p>
+        </div>
+        <div class="user-card" data-aos="fade-up">
+          <div class="user-icon">◇</div>
+          <h4>Investors &amp; Consultants</h4>
+          <p>Market intelligence, trend data and fleet analytics to inform investment decisions and strategic advice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Waitlist Section -->
+  <section id="waitlist" class="section-waitlist">
+    <div class="container">
+      <div class="waitlist-inner">
+        <div class="waitlist-glow"></div>
+        <div class="section-label centered">
+          <span class="label-line"></span>
+          <span>Early Access</span>
+          <span class="label-line"></span>
+        </div>
+        <h2 class="waitlist-title">Join the founding<br>cohort of <span class="accent">DataJet24.</span></h2>
+        <p class="waitlist-sub">Early Access members receive <strong>6 months of complimentary access</strong> when DataJet24 launches. Reserve your position now.</p>
+
+        <form id="waitlistForm" action="https://formspree.io/f/mnjkvwpp" method="POST" class="waitlist-form">
+          <input type="hidden" name="_subject" value="New DJ24 Early Access Signup">
+          <input type="hidden" name="_next" value="https://www.datajet24.com/thank-you.html">
+          <div class="form-row">
+            <div class="form-input-wrap">
+              <input type="email" name="email" id="emailInput" placeholder="Your professional email address" required autocomplete="email">
+              <label for="emailInput">Email Address</label>
+            </div>
+            <button type="submit" class="btn-waitlist">
+              <span>Request Early Access</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          <p class="form-note">No credit card required. No spam. Ever.</p>
+        </form>
+
+        <div class="waitlist-badges">
+          <div class="wl-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>6 months free access</span>
+          </div>
+          <div class="wl-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Priority onboarding</span>
+          </div>
+          <div class="wl-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Founding member status</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="DataJet24" height="44">
+          <p>The Global Intelligence Platform<br>for Business Aviation.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5>Platform</h5>
+            <a href="#platform">Airport Intelligence</a>
+            <a href="#platform">Live Tracking</a>
+            <a href="#platform">Operator Directory</a>
+            <a href="#platform">Fleet Intelligence</a>
+          </div>
+          <div class="footer-col">
+            <h5>Company</h5>
+            <a href="#about">About</a>
+            <a href="#waitlist">Early Access</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 DataJet24. All rights reserved.</p>
+        <p class="footer-tagline">Built for the professionals who power business aviation.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
-</html>html></footer></span></span></strong></div></p></p></button></b></p></span></h1></h2>
-</body></title>
-  </head>
+</html>
