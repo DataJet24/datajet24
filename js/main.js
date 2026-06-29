@@ -23,64 +23,6 @@
   document.body.style.overflow = 'hidden';
 })();
 
-// ============================================================
-// NAVIGATION
-// ============================================================
-(function initNav() {
-  const nav = document.getElementById('nav');
-  const mobileBtn = document.getElementById('mobileMenuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-
-  if (!nav) return;
-
-  // Scroll handler
-  let ticking = false;
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        if (window.scrollY > 20) {
-          nav.classList.add('scrolled');
-        } else {
-          nav.classList.remove('scrolled');
-        }
-        ticking = false;
-      });
-      ticking = true;
-    }
-  });
-
-  // Mobile menu
-  if (mobileBtn && mobileMenu) {
-    mobileBtn.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.contains('open');
-      mobileMenu.classList.toggle('open');
-      mobileBtn.setAttribute('aria-expanded', !isOpen);
-    });
-
-    // Close on link click
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        mobileBtn.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-
-  // Smooth scroll for nav links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const href = anchor.getAttribute('href');
-      if (href === '#') return;
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        const navHeight = nav.offsetHeight;
-        const targetTop = target.getBoundingClientRect().top + window.scrollY - navHeight;
-        window.scrollTo({ top: targetTop, behavior: 'smooth' });
-      }
-    });
-  });
-})();
 
 // ============================================================
 // HERO CANVAS — Particles
