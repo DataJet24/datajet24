@@ -1180,3 +1180,119 @@ a, button {
   
   #loader { display: none; }
 }
+
+
+/* ==========================================================
+   WAITLIST FORM - Extended Fields
+   ========================================================== */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.form-grid .form-input-wrap {
+  position: relative;
+}
+
+.form-full-width {
+  grid-column: 1 / -1;
+}
+
+.form-submit-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.form-submit-row .btn-waitlist {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Phone number field: side-by-side code + number */
+.form-phone-wrap {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.phone-code-select {
+  flex: 0 0 110px;
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.875rem;
+  padding: 14px 10px;
+  height: 52px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23aaa' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 24px;
+}
+
+.phone-code-select:focus {
+  outline: none;
+  border-color: #FF8A00;
+  background-color: rgba(255, 138, 0, 0.06);
+}
+
+.form-phone-wrap input[type="tel"] {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Country select */
+.country-select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.875rem;
+  padding: 14px 36px 14px 16px;
+  height: 52px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23aaa' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  color-scheme: dark;
+}
+
+.country-select:focus {
+  outline: none;
+  border-color: #FF8A00;
+  background-color: rgba(255, 138, 0, 0.06);
+}
+
+.country-select option,
+.phone-code-select option {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+/* Mobile: single column */
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-phone-wrap {
+    flex-direction: row;
+  }
+
+  .phone-code-select {
+    flex: 0 0 100px;
+  }
+}
