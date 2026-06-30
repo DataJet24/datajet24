@@ -409,11 +409,136 @@
         <form id="waitlistForm" action="https://formspree.io/f/mnjkvwpp" method="POST" class="waitlist-form">
           <input type="hidden" name="_subject" value="New DJ24 Early Access Signup">
           <input type="hidden" name="_next" value="https://www.datajet24.com/thank-you.html">
-          <div class="form-row">
+          <div class="form-grid">
             <div class="form-input-wrap">
-              <input type="email" name="email" id="emailInput" placeholder="Your professional email address" required autocomplete="email">
+              <input type="text" name="firstName" id="firstNameInput" placeholder="First name" required autocomplete="given-name">
+              <label for="firstNameInput">First Name</label>
+            </div>
+            <div class="form-input-wrap">
+              <input type="text" name="lastName" id="lastNameInput" placeholder="Last name" required autocomplete="family-name">
+              <label for="lastNameInput">Last Name</label>
+            </div>
+            <div class="form-input-wrap">
+              <input type="email" name="email" id="emailInput" placeholder="Professional email address" required autocomplete="email">
               <label for="emailInput">Email Address</label>
             </div>
+            <div class="form-input-wrap form-phone-wrap">
+              <select name="phoneCode" id="phoneCodeInput" class="phone-code-select" autocomplete="tel-country-code">
+                <option value="+1">🇺🇸 +1</option>
+                <option value="+44">🇬🇧 +44</option>
+                <option value="+33">🇫🇷 +33</option>
+                <option value="+49">🇩🇪 +49</option>
+                <option value="+39">🇮🇹 +39</option>
+                <option value="+34">🇪🇸 +34</option>
+                <option value="+31">🇳🇱 +31</option>
+                <option value="+41">🇨🇭 +41</option>
+                <option value="+46">🇸🇪 +46</option>
+                <option value="+47">🇳🇴 +47</option>
+                <option value="+45">🇩🇰 +45</option>
+                <option value="+358">🇫🇮 +358</option>
+                <option value="+32">🇧🇪 +32</option>
+                <option value="+43">🇦🇹 +43</option>
+                <option value="+351">🇵🇹 +351</option>
+                <option value="+30">🇬🇷 +30</option>
+                <option value="+48">🇵🇱 +48</option>
+                <option value="+420">🇨🇿 +420</option>
+                <option value="+36">🇭🇺 +36</option>
+                <option value="+40">🇷🇴 +40</option>
+                <option value="+7">🇷🇺 +7</option>
+                <option value="+380">🇺🇦 +380</option>
+                <option value="+90">🇹🇷 +90</option>
+                <option value="+971">🇦🇪 +971</option>
+                <option value="+966">🇸🇦 +966</option>
+                <option value="+974">🇶🇦 +974</option>
+                <option value="+965">🇰🇼 +965</option>
+                <option value="+973">🇧🇭 +973</option>
+                <option value="+968">🇴🇲 +968</option>
+                <option value="+212">🇲🇦 +212</option>
+                <option value="+20">🇪🇬 +20</option>
+                <option value="+27">🇿🇦 +27</option>
+                <option value="+234">🇳🇬 +234</option>
+                <option value="+254">🇰🇪 +254</option>
+                <option value="+91">🇮🇳 +91</option>
+                <option value="+86">🇨🇳 +86</option>
+                <option value="+81">🇯🇵 +81</option>
+                <option value="+82">🇰🇷 +82</option>
+                <option value="+65">🇸🇬 +65</option>
+                <option value="+60">🇲🇾 +60</option>
+                <option value="+66">🇹🇭 +66</option>
+                <option value="+62">🇮🇩 +62</option>
+                <option value="+63">🇵🇭 +63</option>
+                <option value="+61">🇦🇺 +61</option>
+                <option value="+64">🇳🇿 +64</option>
+                <option value="+55">🇧🇷 +55</option>
+                <option value="+54">🇦🇷 +54</option>
+                <option value="+57">🇨🇴 +57</option>
+                <option value="+52">🇲🇽 +52</option>
+                <option value="+56">🇨🇱 +56</option>
+                <option value="+1-CA">🇨🇦 +1</option>
+              </select>
+              <input type="tel" name="phone" id="phoneInput" placeholder="Phone number" autocomplete="tel-national">
+              <label for="phoneInput">Phone Number</label>
+            </div>
+            <div class="form-input-wrap form-full-width">
+              <select name="country" id="countryInput" class="country-select" required autocomplete="country-name">
+                <option value="" disabled selected>Select your country</option>
+                <option value="United States">United States</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="Italy">Italy</option>
+                <option value="Spain">Spain</option>
+                <option value="Netherlands">Netherlands</option>
+                <option value="Switzerland">Switzerland</option>
+                <option value="Sweden">Sweden</option>
+                <option value="Norway">Norway</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Finland">Finland</option>
+                <option value="Belgium">Belgium</option>
+                <option value="Austria">Austria</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Greece">Greece</option>
+                <option value="Poland">Poland</option>
+                <option value="Czech Republic">Czech Republic</option>
+                <option value="Hungary">Hungary</option>
+                <option value="Romania">Romania</option>
+                <option value="Russia">Russia</option>
+                <option value="Ukraine">Ukraine</option>
+                <option value="Turkey">Turkey</option>
+                <option value="United Arab Emirates">United Arab Emirates</option>
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Kuwait">Kuwait</option>
+                <option value="Bahrain">Bahrain</option>
+                <option value="Oman">Oman</option>
+                <option value="Morocco">Morocco</option>
+                <option value="Egypt">Egypt</option>
+                <option value="South Africa">South Africa</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Kenya">Kenya</option>
+                <option value="India">India</option>
+                <option value="China">China</option>
+                <option value="Japan">Japan</option>
+                <option value="South Korea">South Korea</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Philippines">Philippines</option>
+                <option value="Australia">Australia</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Chile">Chile</option>
+                <option value="Canada">Canada</option>
+                <option value="Other">Other</option>
+              </select>
+              <label for="countryInput">Country</label>
+            </div>
+          </div>
+          <div class="form-submit-row">
             <button type="submit" class="btn-waitlist">
               <span>Request Early Access</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
