@@ -417,27 +417,41 @@
 // BREVO INTEGRATION - Add to Early Access Waitlist
 // ==========================================================
 (function initBrevoIntegration() {
-    var form = document.getElementById('waitlistForm');
-    if (!form) return;
+  var form = document.getElementById('waitlistForm');
+  if (!form) return;
 
-    form.addEventListener('submit', function (e) {
-          var emailInput = document.getElementById('emailInput');
-          if (!emailInput || !emailInput.value) return;
+  form.addEventListener('submit', function () {
+    var emailInput = document.getElementById('emailInput');
+    if (!emailInput || !emailInput.value) return;
 
-          fetch('https://api.brevo.com/v3/contacts', {
-                  method: 'POST',
-                  headers: {
-                            'api-key': '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',
-                            'Content-Type': 'application/json'
-                  },
-                  body: JSON.stringify({
-                            email: emailInput.value.trim(),
-                            listIds: [5],
-                            updateEnabled: true
-                  }),
-                  keepalive: true
-          }).catch(function () {});
-    });
+    var firstName = (document.getElementById('firstNameInput') || {}).value || '';
+    var lastName  = (document.getElementById('lastNameInput')  || {}).value || '';
+    var phoneCode = (document.getElementById('phoneCodeInput') || {}).value || '';
+    var phone     = (document.getElementById('phoneInput')     || {}).value || '';
+    var country   = (document.getElementById('countryInput')   || {}).value || '';
+    var fullPhone  = phone ? (phoneCode + phone).replace(/\s/g, '') : '';
+
+    var payload = {
+      email: emailInput.value.trim(),
+      listIds: [5],
+      updateEnabled: true,
+      attributes: {}
+    };
+    if (firstName) payload.attributes.FIRSTNAME = firstName.trim();
+    if (lastName)  payload.attributes.LASTNAME  = lastName.trim();
+    if (fullPhone) payload.attributes.SMS        = fullPhone;
+    if (country)   payload.attributes.COUNTRY    = country;
+
+    fetch('https://api.brevo.com/v3/contacts', {
+      method: 'POST',
+      headers: {
+        'api-key': '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',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload),
+      keepalive: true
+    }).catch(function () {});
+  });
 })();
 console.log('%c DataJet24 ', 'background: #FF7800; color: #000; font-weight: bold; font-size: 14px; padding: 4px 8px; border-radius: 4px;');
 console.log('%c The Global Intelligence Platform for Business Aviation ', 'color: #FF7800; font-size: 11px;');
