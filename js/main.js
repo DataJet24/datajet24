@@ -434,7 +434,8 @@
                             email: emailInput.value.trim(),
                             listIds: [5],
                             updateEnabled: true
-                  })
+                  }),
+                  keepalive: true
           }).catch(function () {});
     });
 })();
